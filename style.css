@@ -1,0 +1,197 @@
+:root {
+  /* Primary Colors */
+  --primary-text: #f8f6f4;
+  --secondary-text: #322018;
+
+  /* Secondary Colors */
+  --primary-color: #eae5df;
+  --secondary-color: #903c02;
+  --miss-text: #a09690c2;
+  --pure-text: #504641;
+
+  /* Font Sizes */
+  --font-small: 14.5px;
+  --font-large: 4vw;
+  --font-med: 2.5vw;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+::selection {
+  background-color: #903c02;
+  color: #f8f6f4;
+}
+
+#mainz0 {
+  overflow-x: hidden;
+  z-index: 10;
+  background-color: #eae5df;
+}
+
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: Wregular;
+  src: url(./assets/fonts/ABCWhyte-Light.ttf);
+}
+
+@font-face {
+  font-family: Wlight;
+  src: url(./assets/fonts/ABCWhyte-Regular.ttf);
+}
+
+@font-face {
+  font-weight: 100;
+  font-family: grif;
+  src: url(./assets/fonts/KaftanSerif-Regular.ttf);
+}
+
+.nav-links-seprater {
+  margin: 0 1.4vw;
+  height: 15px;
+  width: 1px;
+  background-color: #adadae;
+}
+
+.blank-verti-hr {
+  margin-top: 8vw 0;
+  mix-blend-mode: overlay;
+  height: 60px;
+  width: 1px;
+  background-color: #adadae;
+}
+
+.dao svg {
+  transition: transform 1s ease;
+}
+
+.dao:hover svg {
+  animation: moke 1s;
+  animation-fill-mode: forwards;
+  transform: rotate(90deg);
+}
+
+@keyframes moke {
+  from {
+    transform: rotate(0deg);
+    transition: transform 1s ease;
+  }
+
+  to {
+    transform: rotate(150deg);
+  }
+}
+
+.border-top-ornament {
+  background-color: #eae5df;
+  /* margin: 10vw 0 0 0; */
+  padding: 10vw 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.border-top-ornament .seprater-border {
+  height: 0.5px;
+  background-color: #d7bfac;
+  width: 49%;
+}
+
+.border-top-ornament .ornament svg {
+  height: 35px;
+}
+
+/* .main-cards svg{
+} */
+
+.main-cards:hover svg {
+  animation: rotate 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+    transition: transform 1s ease;
+  }
+
+  to {
+    transform: rotate(90deg);
+  }
+}
+
+.s7-cnf-1 .s7-menu-anc::after {
+  opacity: 0;
+  content: "";
+  background-color: var(--secondary-text);
+  position: absolute;
+  right: -20px;
+  transition: right 0.5s ease;
+  border-radius: 50%;
+  margin-top: 2vw;
+  width: 6px;
+  height: 6px;
+}
+
+.s7-cnf-1 .s7-menu-anc:hover::after {
+  right: 0;
+  opacity: 1;
+}
+
+.icon-tabler-x {
+  transition: all ease 0.3s;
+  cursor: pointer;
+}
+
+.icon-tabler-x:hover {
+  scale: 0.6;
+}
+
+.icon-tabler-x:active {
+  scale: 1;
+}
+
+.dopes {
+  position: relative;
+  text-decoration: none;
+}
+
+.dopes::before,
+.dopes::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #beb6b0; /* Change the color as needed */
+  transform: scaleX(0); /* Initial scale for no underline */
+  transform-origin: right left;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect - scale up the underline on hover for 'dopes' class */
+.dopes:hover::before,
+.dopes:hover::after {
+  transform: scaleX(1);
+}
+
+/* Adjust the height dynamically based on text size for 'dopes' class */
+.dopes::before,
+.dopes::after {
+  height: 0.1em; /* You can adjust this value based on your preference */
+}
+
+/* Ensure the underline fits the content width */
+.dopes::before {
+  transform-origin: bottom left;
+}
+
+/* Ensure the underline fits the content width */
+.dopes::after {
+  transform-origin: bottom right;
+}
